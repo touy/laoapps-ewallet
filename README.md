@@ -26,12 +26,17 @@ Angular 8 Snippets - TypeScript, Html, Angular Material, ngRx, RxJS & Flex Layou
 --- B.EP4 ຮຽນຮູ້ CSS , PROPERTY , ATTRIBUTE ຂອງ TAG
 
 -- JavaScript (JS)
---- B.EP5 ຮ່ຽນຮູ້ JAVASCRIPT , JS
+--- B.EP5 ຮຽນຮູ້ JAVASCRIPT , JS
 
 -- Typescript
 --- B.EP6 ຮ່ຽນຮູ້ TypeScript, TS
+https://www.tutorialspoint.com/typescript/typescript_environment_setup.htm
+--- NodeJS 12
 
--- NodeJS 12
+npm install -g typescript
+
+
+
 - A: Advance
 -- NodeJS 12
 -- Express
