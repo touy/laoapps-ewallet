@@ -32,10 +32,19 @@ Angular 8 Snippets - TypeScript, Html, Angular Material, ngRx, RxJS & Flex Layou
 --- B.EP6 ຮ່ຽນຮູ້ TypeScript, TS
 https://www.tutorialspoint.com/typescript/typescript_environment_setup.htm
 --- NodeJS 12
+https://nodejs.org/en/download/
+http://npm.github.io/installation-setup-docs/installing/using-a-node-version-manager.html
+https://www.npmjs.com/package/ts-node
+--- 
+https://www.tutorialsteacher.com/typescript/first-typescript-program
+--- B.EP7 ຮຽນຮູ້ກ່ຽວກັບ FUNCTION , ປະພັດ, ແລະ ຕົວປ່ຽນ... , TS
+--- B.EP8 ຮ່ຽນຮູ້ກ່ຽວກັບຕົວປ່ຽນ, ລາປະເພດຂອງຕົວປ່ຽນ.
+--- B.EP9 ຮຽນຮູ້ ການໃຊ້ ງານ ຂອງແຕ່ລະຕົວປ່ຽນ -- string.
+--- B.EP10 ຮຽນຮູ້ ການໃຊ້ ງານ ຂອງແຕ່ລະຕົວປ່ຽນ -- array.
+--- B.EP11 ຮຽນຮູ້ ການໃຊ້ ງານ ການປ່ຽນປະເພດ ແລະປະເພດຕາມໃຈ-- .
+--- B.EP12 
 
 npm install -g typescript
-
-
 
 - A: Advance
 -- NodeJS 12
