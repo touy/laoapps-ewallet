@@ -1,5 +1,5 @@
 // TEXT
-var mystring : string = 'abc';
+var mystring: string = 'abc';
 mystring = 'abc,123,4576      ';
 
 // console.log('char at ',mystring[0]);
@@ -14,11 +14,11 @@ mystring = 'abc,123,4576      ';
 // console.log('char at ',mystring.toUpperCase());
 // console.log('char at ',mystring.trim());
 
-var mynumber : number = 1; // - , + , undefined 
+var mynumber: number = 1; // - , + , undefined 
 
-var mybool : boolean = true ;// false, true , undefined
+var mybool: boolean = true;// false, true , undefined
 
-var myarray : string[] = [];
+var myarray: string[] = [];
 myarray.push('1'); // 0
 myarray.push('2'); // 1
 myarray.push('true'); // 2
@@ -26,15 +26,15 @@ myarray.push('true'); // 2
 console.log(myarray);
 
 console.log(myarray.reverse());
-var myarray2 =myarray.reverse().concat([]);
+var myarray2 = myarray.reverse().concat([]);
 //myarray.shift();
 myarray2.shift();
-console.log('myarray ',myarray);
+console.log('myarray ', myarray);
 console.log('myarray ', myarray2);
 
 var myconcat = myarray.concat([]);
 myarray.shift();
-console.log('concat',myconcat);
+console.log('concat', myconcat);
 
 
 var mynumber1 = 1;
@@ -43,9 +43,9 @@ var mynumber2: any = 2;
 mynumber1 = <number>mynumber2;
 mynumber1 = mynumber2 as number;
 
-var myobj: {number1:number,string1:string} = <{number1:number,string1:string}>{};
+var myobj: { number1: number, string1: string } = <{ number1: number, string1: string }>{};
 
-var myobj1: {number1:number,string1:string} = {} as {number1:number,string1:string};
+var myobj1: { number1: number, string1: string } = {} as { number1: number, string1: string };
 
 // var head : {haircolor:string,eyescolor:string,nose:boolean} = {} as {haircolor:string,eyescolor:string,nose:boolean}; 
 // head.eyescolor ='black';
@@ -58,21 +58,261 @@ var myobj1: {number1:number,string1:string} = {} as {number1:number,string1:stri
 // };
 
 interface myhead {
-    haircolor:string,
-    nose:boolean,
+    haircolor: string,
+    nose: boolean,
 }
 
-var head:myhead = <myhead>{};
-head.haircolor ='black';
+var head: myhead = <myhead>{};
+head.haircolor = 'black';
 head.nose = true;
 
-console.log('my head',head);
+console.log('my head', head);
+// OOP
+// WALLET
+// ENUM
+export enum currencies {
+    KIP = 'KIP',
+    USD = 'USD',
+    THB = 'THB'
+}
+// INTERFACE
+export interface sender {
+    name: string;
+    amount: number;
+    created_time: string; // ເວລາສ້າງ
+    updated_time: string; // ເວລາມີການປ່ຽນແປງ
+    currency: string; // ສະກຸນເງິນ
+}
+export interface receiver {
+    name: string;
+    amount: number;
+    created_time: string; // ເວລາສ້າງ
+    updated_time: string; // ເວລາມີການປ່ຽນແປງ
+    currency: string; // ສະກຸນເງິນ
+}
+export interface wallet {
+    owner: string; // ເຈົ້າຂອງ
+    created_time: string; // ເວລາສ້າງ
+    updateed_time: string; // ເວລາມີການປ່ຽນແປງ
+    currency: string; // ສະກຸນເງິນ
+    amount: number; // ຈຳນວນ
+    pay: (amount: number, receiver: string) => string;
+    receive: (amount: number, sender: string) => string;
+    senders: sender[];
+    receiver: receiver[];
+}
+//()=>{
+var mywallet: wallet = <wallet>{};
+mywallet.owner = 'me';
+mywallet.amount = 0;
+mywallet.created_time = (new Date()).toString();
+mywallet.updateed_time = (new Date()).toString();
+mywallet.currency = 'KIP';
+
+mywallet.pay = (amount: number, receiver: string): string => {
+    mywallet.amount -= amount;
+    if (!mywallet.receiver || mywallet.receiver != null || mywallet.receiver != undefined) { // true false
+        mywallet.receiver = [];
+    }
+    const r: receiver = <receiver>{};
+    r.amount = amount;
+    r.created_time = (new Date()).toString();
+    r.updated_time = (new Date()).toString();
+    r.name = receiver;
+    mywallet.receiver.push(r);
+
+    return 'ok';
+}
+mywallet.receive = (amount: number, sender: string): string => {
+    mywallet.amount += amount;
+    if (!mywallet.senders || mywallet.senders != null || mywallet.senders != undefined) { // true false
+        mywallet.senders = [];
+    }
+    const s: sender = <sender>{};
+    s.amount = amount;
+    s.created_time = (new Date()).toString();
+    s.updated_time = (new Date()).toString();
+    s.name = sender;
+    mywallet.senders.push(s);
+
+    return 'ok';
+}
+// mywallet.receive(1000,'you');
+// mywallet.pay(500,'friend');
+// console.log(mywallet);
+
+
+
+//}
+
+// CLASS
+export class cWallet {
+    owner: string; // ເຈົ້າຂອງ
+    created_time: string; // ເວລາສ້າງ
+    updateed_time: string; // ເວລາມີການປ່ຽນແປງ
+    currency: string; // ສະກຸນເງິນ
+    amount: number; // ຈຳນວນ
+    senders: sender[] = [];
+    receiver: receiver[] = [];
+    constructor(owner: string = '',
+        currency: string = '',
+        amount: number = 100,
+        created_time: string = '',
+        updated_time: string = '') {
+        this.currency = currency;
+        this.amount = amount;
+        this.created_time = created_time;
+        this.updateed_time = updated_time;
+        this.owner = owner;
+    }
+
+    pay(amount: number, receiver: string): string {
+        this.amount -= amount;
+        if (!this.receiver || this.receiver != null || this.receiver != undefined) { // true false
+            this.receiver = [];
+        }
+        const r: receiver = <receiver>{};
+        r.amount = amount;
+        r.created_time = (new Date()).toString();
+        r.updated_time = (new Date()).toString();
+        r.name = receiver;
+        this.receiver.push(r);
+
+        return 'ok';
+    }
+    receive(amount: number, sender: string): string {
+        this.amount += amount;
+        if (!this.senders || this.senders != null || this.senders != undefined) { // true false
+            this.senders = [];
+        }
+        const s: sender = <sender>{};
+        s.amount = amount;
+        s.created_time = (new Date()).toString();
+        s.updated_time = (new Date()).toString();
+        s.name = sender;
+        this.senders.push(s);
+
+        return 'ok';
+    }
+
+}
+
+var myCWallet: cWallet = new cWallet('touy', currencies.KIP, 0, new Date().toString(), new Date().toString());
+myCWallet.receive(1000, 'you');
+myCWallet.pay(500, 'friend');
+console.log('my CWallet', myCWallet);
+
+console.log(JSON.stringify(myCWallet));
+
+
+// IF
+// TRUE , FALSE
+// || ຫຼື
+// && ແລະ 
+// >
+// <
+// >=
+// <=
+//  ===
+// !
+// !==
+
+if (true || false) {
+    console.log('true || false');
+}
+if (true && false) {
+    console.log('true && false');
+}
+if (false && false) {
+    console.log('false && false');
+}
+if (true && true) {
+    console.log('true && true');
+}
+if (1 < 0) {
+    console.log('1<0');
+}
+if (1 > 0) {
+    console.log('1>0');
+}
+var n1: number = 1;
+var n2: number = 0;
+if (n1 === n2) {
+    console.log('n1===n2');
+}
+if (n1 !== n2) {
+    console.log('n1!==n2');
+}
+if (n1 >= n2) {
+    console.log('n1>=n2');
+}
+if (n1 <= n2) {
+    console.log('n1<=n2');
+}
+if (n2) {
+    console.log('n2');
+}
+if (!n2) {
+    console.log('!n2');
+
+}
+
+var n3 = 3;
+if (n3 === 0) {
+    console.log('0');
+} else if (n3 === 1) {
+    console.log('1');
+}
+else if (n3 === 2) {
+    console.log('2');
+}
+else {
+    console.log('3');
+}
+// short if
+console.log(checkN3());
+
+function checkN3() {
+    return n3 === 1 ? '3' : 'flase';
+}
+
+enum myDay {
+    Monday = 'Monday',
+    Tuesday = 'Tuesday',
+    Wednesday   = 'Wednesday',
+    Thursday = 'Thursday',
+    Friday = 'Friday',
+    Saturday = 'Saturday',
+    Sunday = 'Sunday',
+}
+
+let day: string = myDay.Sunday;
+switch (day) {
+    case myDay.Monday:
+        break;
+    case myDay.Friday:
+        break;
+    case myDay.Sunday:
+        console.log('today is '+day);
+        
+
+        break;
+
+    default:
+        console.log("this is "+day);
+        break;
+}
 
 
 
 
 
-var mytruple :[string,number]= ['',1];
+
+
+
+
+
+var mytruple: [string, number] = ['', 1];
 
 enum myenum {
     Newspaper = 1,
@@ -87,17 +327,17 @@ enum myenum2 {
     Book = 'Book',
 }
 
-var myuniion : number|string|boolean =true;
+var myuniion: number | string | boolean = true;
 
-var myany : any =[];
+var myany: any = [];
 
 
-var myvoid2 :void =undefined;
+var myvoid2: void = undefined;
 
-function mvoid ():void{
+function mvoid(): void {
 
 }
 
-var myvoid3 : void = mvoid();
+var myvoid3: void = mvoid();
 
 myvoid3;

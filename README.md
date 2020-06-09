@@ -42,7 +42,10 @@ https://www.tutorialsteacher.com/typescript/first-typescript-program
 --- B.EP9 ຮຽນຮູ້ ການໃຊ້ ງານ ຂອງແຕ່ລະຕົວປ່ຽນ -- string.
 --- B.EP10 ຮຽນຮູ້ ການໃຊ້ ງານ ຂອງແຕ່ລະຕົວປ່ຽນ -- array.
 --- B.EP11 ຮຽນຮູ້ ການໃຊ້ ງານ ການປ່ຽນປະເພດ ແລະປະເພດຕາມໃຈ-- .
---- B.EP12 
+--- B.EP12 ການປະກາດ, ແລະໃຊ້ ງານ ປະເພດຕາມໃຈ, CLASS, INTERFACE ແລະ ENUM
+--- B.EP13 ການໃຊ້ IF , ເງື່ອນໄຂ
+--- B.EP14 ການໃຊ້ SWITCH , ເງື່ອນໄຂ
+
 
 npm install -g typescript
 
