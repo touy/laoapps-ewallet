@@ -369,7 +369,10 @@ do {
     console.log(nn++);
 } while (nn<=100);
 
-
+n4.forEach(element => {
+    console.log(element);
+    
+});
 
 
 
