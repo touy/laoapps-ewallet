@@ -45,6 +45,9 @@ https://www.tutorialsteacher.com/typescript/first-typescript-program
 --- B.EP12 ການປະກາດ, ແລະໃຊ້ ງານ ປະເພດຕາມໃຈ, CLASS, INTERFACE ແລະ ENUM
 --- B.EP13 ການໃຊ້ IF , ເງື່ອນໄຂ
 --- B.EP14 ການໃຊ້ SWITCH , ເງື່ອນໄຂ
+--- B.EP15 ການໃຊ້ LOOP FOR , FOR OF , FOR IN , FOR EACH , WHILE , DO WHILE
+https://github.com/touy/laoapps-ewallet
+
 
 
 npm install -g typescript

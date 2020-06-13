@@ -303,6 +303,73 @@ switch (day) {
         break;
 }
 
+// LOOP FOR , FOR OF , FOR IN , FOR EACH
+//++
+// var n =0;
+// console.log('n',n);
+// n+=1; // n = n +1
+// console.log('n+=1',n);
+// ++n ;
+// console.log('++n',n);
+// var n1 =0;
+// n1 = n++; // n+=1 , n= n+1
+// console.log('n++',n);
+// console.log('n1 =n++',n1);
+
+// console.log('------- n -------',n);
+// console.log('n--',--n);
+
+//--
+
+// FOR 
+var arr :number [] = [1,2,3,4,5];
+for (let index = 0;
+    index < arr.length; 
+    index++) {
+    // const element = arr[index];
+    // arr.push(index);
+    // console.log(element);
+}
+
+// FOR OF
+for (const it of arr) {
+    console.log(it);
+    
+}
+
+// FOR IN 
+var obj :{name:string,lastname:string}[] =[
+    {name:'a',lastname:'b'},
+    {name:'c',lastname:'d'},
+    {name:'e',lastname:'f'},
+]
+var obj1 ={name:'I',lastname:'J'};
+for (const key in obj1) {
+
+    console.log('key',key);
+    const k = key+'';
+    console.log('obj value',obj1['lastname']);
+    
+    // if (obj.hasOwnProperty(key)) {
+    //     const element = obj[key];
+        
+    // }
+}
+
+// while loop
+var n4 :number [] = [1,2,3,4,5];
+var nn =0;
+while (nn<=1) {
+    console.log(nn++);
+    nn ++;
+}
+// do while loop
+nn =0;
+do {
+    console.log(nn++);
+} while (nn<=100);
+
+
 
 
 
