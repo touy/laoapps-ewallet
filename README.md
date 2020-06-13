@@ -47,7 +47,10 @@ https://www.tutorialsteacher.com/typescript/first-typescript-program
 --- B.EP14 ການໃຊ້ SWITCH , ເງື່ອນໄຂ
 --- B.EP15 ການໃຊ້ LOOP FOR , FOR OF , FOR IN , FOR EACH , WHILE , DO WHILE
 https://github.com/touy/laoapps-ewallet
-
+n4.forEach(element => {
+    console.log(element);
+    
+});
 
 
 npm install -g typescript
