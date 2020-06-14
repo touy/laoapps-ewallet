@@ -51,9 +51,21 @@ n4.forEach(element => {
     console.log(element);
     
 });
+--- B.EP15+ FOR EACH , FOR IN 
+n4.forEach(element => {
+    console.log(element);
+});
+"suppressImplicitAnyIndexErrors":true,
+
+--- B.EP16 ການໃຊ້  function , arrow function, function overloading, rest parameters
+https://www.tutorialsteacher.com/typescript/typescript-function
+
+--- B.EP17 DATA MODIFIER , READONLY // - STATIC
+--- B.EP18 INTERFACE , CLASS // - ABSTRACT
 
 
-npm install -g typescript
+
+
 
 - A: Advance
 -- NodeJS 12

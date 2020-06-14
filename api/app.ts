@@ -279,7 +279,7 @@ function checkN3() {
 enum myDay {
     Monday = 'Monday',
     Tuesday = 'Tuesday',
-    Wednesday   = 'Wednesday',
+    Wednesday = 'Wednesday',
     Thursday = 'Thursday',
     Friday = 'Friday',
     Saturday = 'Saturday',
@@ -293,13 +293,13 @@ switch (day) {
     case myDay.Friday:
         break;
     case myDay.Sunday:
-        console.log('today is '+day);
-        
+        console.log('today is ' + day);
+
 
         break;
 
     default:
-        console.log("this is "+day);
+        console.log("this is " + day);
         break;
 }
 
@@ -322,9 +322,9 @@ switch (day) {
 //--
 
 // FOR 
-var arr :number [] = [1,2,3,4,5];
+var arr: number[] = [1, 2, 3, 4, 5];
 for (let index = 0;
-    index < arr.length; 
+    index < arr.length;
     index++) {
     // const element = arr[index];
     // arr.push(index);
@@ -334,49 +334,147 @@ for (let index = 0;
 // FOR OF
 for (const it of arr) {
     console.log(it);
-    
+
 }
 
 // FOR IN 
-var obj :{name:string,lastname:string}[] =[
-    {name:'a',lastname:'b'},
-    {name:'c',lastname:'d'},
-    {name:'e',lastname:'f'},
+var obj: { name: string, lastname: string }[] = [
+    { name: 'a', lastname: 'b' },
+    { name: 'c', lastname: 'd' },
+    { name: 'e', lastname: 'f' },
 ]
-var obj1 ={name:'I',lastname:'J'};
+var obj1 = { name: 'I', lastname: 'J' };
 for (const key in obj1) {
 
-    console.log('key',key);
-    const k = key+'';
-    console.log('obj value',obj1['lastname']);
-    
+    console.log('key', key);
+    const k = key + '';
+    console.log('obj value', obj1);
+
     // if (obj.hasOwnProperty(key)) {
     //     const element = obj[key];
-        
+
     // }
 }
 
 // while loop
-var n4 :number [] = [1,2,3,4,5];
-var nn =0;
-while (nn<=1) {
-    console.log(nn++);
-    nn ++;
+var n4: number[] = [1, 2, 3, 4, 5];
+var nn = 0;
+while (nn <= 0) {
+    // console.log(nn++);
+    nn++;
 }
 // do while loop
-nn =0;
+nn = 0;
 do {
-    console.log(nn++);
-} while (nn<=100);
+    nn++;
+    // console.log(nn++);
+} while (nn <= 0);
 
-n4.forEach(element => {
-    console.log(element);
-    
+
+
+//  FOR IN ,FOREACH 
+
+var boj2 = { name: 'A', lastname: 'B' };
+
+for (const key in boj2) { // "suppressImplicitAnyIndexErrors":true,
+    if (boj2.hasOwnProperty(key)) {
+        const val = boj2[key];
+        console.log('key ', key);
+        console.log('value', val);
+    }
+}
+// FOR EACH
+var arr: number[] = [1, 2, 3, 4, 5];
+arr.forEach(element => {
+    console.log('element', element);
+
 });
+for (const element of arr) {
+    console.log('element2', element);
+}
+
+//function , arrow function, function overloading, rest parameters
+func1();
+console.log('called sum', sum(1, 1));
+let sk = 1;
+let sk1 = 1;
+function add(a: string | number, b: string | number): string | number;
+
+// function add(a:number, b:number): number;
+// function add(a:number, b:number): string;
+
+function add(a: any, b: any): any {
+    return a + b;
+}
+add(1, 2);
+
+// var add =function sum1(a:number,b:number):number{
+//     const v = a+b;
+//     console.log('called add ',v);
+
+//     return v;
+// }
+// add(1,1);
+
+function sum(a: number, b: number): number {
+    return a + b;
+}
+function func1() {
+    console.log('func1');
+}
+
+// function arrow
+let func2 = (): void => {
+    console.log('func2 called');
+}
+func2();
+
+let func3 = (): void => console.log('func3');
+func3();
+
+function Greet(greeting: string, ...names: string[]) {
+    return greeting + " " + names.join(", ") + "!";
+}
+function Greet2(greeting: string, ...names: string[]) {
+    names.forEach(e => {
+        console.log('greet2', greeting + ' ' + e);
+    });
+
+}
+Greet2('welcome', 'a', 'b', 'c');
+function Greet3(greeting: string, names: string[]) {
+    names.forEach(e => {
+        console.log('greet23', greeting + ' ' + e);
+    });
+}
+Greet3('welcome', ['a', 'b', 'c']);
+
+function Greet4(greeting:string = '',names:string[] = [],age:number=0):void{
+    console.log('greet4');
+    
+    names.forEach(e => {
+        console.log('greet4', greeting + ' ' + e);
+    });
+}
+
+Greet4('',[],10);
 
 
+class Objx {
+    name: string = '';
+    lastname: string = '';
+    age: number = 0;
+    constructor(name:string='') {
+        this.name= name?name:'mr.';
+    }
+    show():void{
+        console.log('show Objx',this.name,this.age,this.lastname);
+        
+    }
+}
 
-
+let objx:Objx = new Objx();
+objx.show();
 
 
 
