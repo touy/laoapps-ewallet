@@ -61,20 +61,33 @@ n4.forEach(element => {
 https://www.tutorialsteacher.com/typescript/typescript-function
 
 --- B.EP17 DATA MODIFIER , READONLY // - STATIC
---- B.EP18 INTERFACE , CLASS // - ABSTRACT
+https://www.tutorialsteacher.com/typescript/data-modifiers
+https://www.tutorialsteacher.com/typescript/typescript-readonly
+
+--- B.EP18 INTERFACE , CLASS // - ABSTRACT  - GENETIC
+https://www.tutorialsteacher.com/typescript/typescript-interface
+https://www.tutorialsteacher.com/typescript/typescript-class
+
+--- B.EP19 module, export // - NAMSPACE
+--- B.EP20 compiling ..
+https://www.tutorialsteacher.com/typescript/converting-javascript-to-typescript
 
 
 
 
 
 - A: Advance
--- NodeJS 12
+-- git
+A.EP1 GIT installation, GIT INIT, .gitignore
+DOWLOAD ແລະຕິດຕັ້ງ GIT
+https://git-scm.com/downloads
+git init 
+.gitignore
 -- Express
 -- MongoDB
 -- Mongoose
 -- Angular 8
 - X: Experience
--- git
 -- ionic 4
 -- cordova
 2. ລະບົບປິດ  ຈະນຳໃຊ້ໄປໃນວຽກຕົວຈິງ, WhatsAppເບີ 02055516321 ຕູ້ຍ ເພື່ອລາຍລະອຽດເພີ່ມເຕີມ.
