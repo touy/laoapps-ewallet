@@ -79,11 +79,20 @@ https://www.tutorialsteacher.com/typescript/converting-javascript-to-typescript
 - A: Advance
 -- git
 A.EP1 GIT installation, GIT INIT, .gitignore
+https://github.com/
 DOWLOAD ແລະຕິດຕັ້ງ GIT
 https://git-scm.com/downloads
 git init 
 .gitignore
 -- Express
+A.EP2 EXPRESS, ROUTE, CORS, JSON
+git init
+git clone https://github.com/touy/laoapps-ewallet
+npm init
+npm install express @types/express @types/cors cors @types/body-parser body-parser
+postman
+http://localhost:3333/hellow?user=A // get query string
+http://localhost:3333/hello/1234 // get params
 -- MongoDB
 -- Mongoose
 -- Angular 8

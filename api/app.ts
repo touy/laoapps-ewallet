@@ -1,24 +1,25 @@
-import {IPerson,Person} from './models/person';
-import {IUser,User} from './models/user';
+import express from 'express';
+import * as cors from 'cors';
+import * as BodyParser from 'body-parser';
+import {Routers} from './routers/routers';
 export class App{
-    //user: IUser = new User('touy','123456',8562055516321,'touya.ra@gmail.com');
-    user:User={} as User;
+    app: express.Application ;
+    routers: Routers;
     constructor(){
+        this.app = express();
+        this.routers = new Routers();
+        this.config();
+    }
+    config(){
+        this.app.use(BodyParser.json());
+        this.app.use(cors.default());
+        this.app.options('*', cors.default());
+        this.routers.routing(this.app);
         
     }
-    createUser(userName:string,password:string,phoneNumber:number,email:string):IUser{
-        this.user = new User(userName,password,phoneNumber,email);
-        return this.user;
-    }
-    createPersonForUser(user:User,person:IPerson):IUser{
-        user.setPerson(person);
-        this.user = user;
-        return this.user;
-    }
-    show(){
-        console.log('show app', this);
-        
-    }
+
 }
-var app:App = new App();
-app.show();
+export default new App().app;
+
+
+
