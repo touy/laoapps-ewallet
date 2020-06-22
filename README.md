@@ -68,7 +68,7 @@ https://www.tutorialsteacher.com/typescript/typescript-readonly
 https://www.tutorialsteacher.com/typescript/typescript-interface
 https://www.tutorialsteacher.com/typescript/typescript-class
 
---- B.EP19 module, export // - NAMSPACE
+--- B.EP19 module, export // - NAMESPACE
 --- B.EP20 compiling ..
 https://www.tutorialsteacher.com/typescript/converting-javascript-to-typescript
 
@@ -93,6 +93,7 @@ npm install express @types/express @types/cors cors @types/body-parser body-pars
 postman
 http://localhost:3333/hellow?user=A // get query string
 http://localhost:3333/hello/1234 // get params
+-- DATABASE DESIGN: ການອອກແບບ ຖານຂໍ້ມູນ
 -- MongoDB
 -- Mongoose
 -- Angular 8
