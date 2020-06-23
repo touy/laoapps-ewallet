@@ -93,9 +93,17 @@ npm install express @types/express @types/cors cors @types/body-parser body-pars
 postman
 http://localhost:3333/hellow?user=A // get query string
 http://localhost:3333/hello/1234 // get params
--- DATABASE DESIGN: ການອອກແບບ ຖານຂໍ້ມູນ
--- MongoDB
--- Mongoose
+A.EP3 DATABASE DESIGN: ການອອກແບບ ຖານຂໍ້ມູນ.
+A.EP4 ENTITY OBJECT ການສ້າງຕົວແທນຖານຂໍ້ມູນ.
+-- A.EP5 MongoDB
+https://www.mongodb.com/try/download/community
+https://www.mongodb.com/products/vs-code
+https://www.mongodb.com/products/compass
+mongodb://localhost:27017/?readPreference=primaryPreferred&appname=MongoDB%20Compass&ssl=false
+-- A.EP6 Mongoose
+https://www.npmjs.com/package/mongoose
+npm i mongoose
+-- A.EP7 RESTFULL API
 -- Angular 8
 - X: Experience
 -- ionic 4

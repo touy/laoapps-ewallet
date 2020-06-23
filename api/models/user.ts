@@ -1,26 +1,21 @@
-import {IPerson,Person} from './person';
-export interface IUser{
+import * as mongoose from 'mongoose';
+import {Schema} from 'mongoose';
+
+export interface WalletUserDocument extends mongoose.Document {
     userName:string;
     password:string;
-    phoneNumber:number;
     email:string;
-}
-export class User implements IUser{
-    private person : IPerson = new Person();
-    userName:string;
-    password:string;
     phoneNumber:number;
-    email:string;
-    constructor(userName:string,password:string,phoneNumber:number,email:string){
-        this.userName=userName;
-        this.password = password;
-        this.phoneNumber = phoneNumber;
-        this.email = email;
-    }
-    setPerson(person:IPerson){
-        this.person = person;
-    }
-    getPerson():IPerson{
-        return this.person;
-    }
 }
+export interface IWalletUser extends WalletUserDocument {
+
+}
+export interface WalletUserModel extends mongoose.Model<IWalletUser>{
+
+}
+export const walletUserSchema = new Schema({
+    userName:{type:String},
+    password:{type:String},
+    email:{type:String},
+    phoneNumber:{type:Number},
+})
